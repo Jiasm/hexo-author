@@ -1,0 +1,24 @@
+{
+  "name": "hexo-author",
+  "version": "0.0.1",
+  "description": "hexo author, use github username.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jiasm/hexo-author.git"
+  },
+  "keywords": [
+    "hexo",
+    "generator",
+    "author"
+  ],
+  "author": "Jarvis",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jiasm/hexo-author/issues"
+  },
+  "homepage": "https://github.com/Jiasm/hexo-author#readme"
+}

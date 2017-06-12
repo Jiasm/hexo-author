@@ -1,2 +1,12 @@
 # hexo-author
-hexo author use github username
+generator hexo post author and email
+
+```markdown
+---
+author: XXX
+email: XXX@XXX.com
+... other things
+---
+```
+
+source from `git config user<name|email>`
