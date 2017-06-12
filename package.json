@@ -1,6 +1,6 @@
 {
   "name": "hexo-author",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "hexo author, use github username.",
   "main": "index.js",
   "scripts": {
