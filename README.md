@@ -1,5 +1,5 @@
 # hexo-author
-generator hexo post author and email
+generate the article's author from github config, when multiple people maintain a blog.
 
 ```markdown
 ---
