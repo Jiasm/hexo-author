@@ -21,7 +21,9 @@ if (typeof hexo !== 'undefined') {
         gitInfo = JSON.parse(gitInfo)
 
         let avatar = gitInfo.avatar_url
+        let github = gitInfo.html_url
         lines.splice(1, 0, 'avatar: ' + avatar)
+        lines.splice(1, 0, 'github: ' + github)
       }
     }
 
