@@ -1,6 +1,6 @@
 {
   "name": "hexo-author",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "hexo author, use github username.",
   "main": "index.js",
   "scripts": {
@@ -23,5 +23,6 @@
   "bugs": {
     "url": "https://github.com/Jiasm/hexo-author/issues"
   },
-  "homepage": "https://github.com/Jiasm/hexo-author#readme"
+  "homepage": "https://github.com/Jiasm/hexo-author#readme",
+  "dependencies": {}
 }
