@@ -5,11 +5,14 @@ generate the article's author from github config, when multiple people maintain 
 ---
 author: XXX
 email: XXX@XXX.com
+avatar: XXXXXXX
 ... other things
 ---
 ```
 
-source from `git config user<name|email>`
+email&author from `git config user<name|email>`
+
+avatar from `api.github.com/users/<username>`
 
 ### how to use
 ```bash
