@@ -1,6 +1,6 @@
 {
   "name": "hexo-author",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "hexo author, use github username.",
   "main": "index.js",
   "scripts": {
@@ -15,6 +15,9 @@
     "generator",
     "author"
   ],
+  "engines": {
+    "node": ">=6.0.0"
+  },
   "author": "Jarvis",
   "license": "ISC",
   "bugs": {
