@@ -10,3 +10,8 @@ email: XXX@XXX.com
 ```
 
 source from `git config user<name|email>`
+
+### how to use
+```bash
+npm i --save hexo-author
+```
