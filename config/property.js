@@ -1,36 +1,3 @@
-# hexo-author
-generate the article's author from github config, when multiple people maintain a blog.
-
-```markdown
----
-author: XXX
-email: XXX@XXX.com
-... other things
----
-```
-
-### how to use
-```bash
-npm i --save hexo-author
-```
-
-### if you want to get some info from github api
-
-> you can set it on `_config.yml`
-
-```yml
-gitinfo:
-  - avatar_url
-  - html_url
-```
-
-### propertys
-
-```
-https://api.github.com/users/<username>
-```
-
-```javascript
 module.exports = [
   'login',
   'id',
@@ -63,4 +30,3 @@ module.exports = [
   'created_at',
   'updated_at'
 ]
-```
