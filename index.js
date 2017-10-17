@@ -6,7 +6,6 @@
 
 const child_process = require('child_process')
 const fs = require('fs')
-const property = require('./config/property')
 
 if (typeof hexo !== 'undefined') {
   hexo.on('new', function (post) {
@@ -17,17 +16,39 @@ if (typeof hexo !== 'undefined') {
     let {gitinfo} = this.config
 
     // request github api
-    if (gitinfo && gitinfo.length) {
+    if (gitinfo) {
       let gitInfoData = getText(child_process.execSync(`curl https://api.github.com/users/${username}`))
       if (gitInfoData) {
         gitInfoData = JSON.parse(gitInfoData)
+        let property = Object.keys(gitInfoData)
 
-        gitinfo.forEach(item => {
-          if (property.includes(item)) {
-            let {[item]: val} = gitInfoData
-            lines.splice(1, 0, `${item}: ${val}`)
-          }
-        })
+        // typeof Array
+        if (Array.isArray(gitinfo) && gitinfo.length) {
+          gitinfo.forEach(item => {
+            if (property.includes(item)) {
+              let {[item]: val} = gitInfoData
+              lines.splice(1, 0, `${item}: ${val}`)
+            }
+          })
+        } else if (typeof gitinfo === 'object' && Object.keys(gitinfo).length) {
+          // typeof Object
+          let infoList = []
+
+          // convert to Array
+          Object.keys(gitinfo).forEach(item => {
+            infoList.push({
+              key: item,
+              alias: gitinfo[item] || item
+            })
+          })
+
+          infoList.forEach(({key, alias}) => {
+            if (property.includes(key)) {
+              let {[key]: val} = gitInfoData
+              lines.splice(1, 0, `${alias}: ${val}`)
+            }
+          })
+        }
       }
     }
 
