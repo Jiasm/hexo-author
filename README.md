@@ -18,10 +18,18 @@ npm i --save hexo-author
 
 > you can set it on `_config.yml`
 
+#### Two ways to use:
+
 ```yml
 gitinfo:
   - avatar_url
   - html_url
+```
+
+```yml
+gitinfo:
+  avatar_url: aliasAvatar
+  html_url: aliasUrl
 ```
 
 ### propertys

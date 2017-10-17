@@ -1,5 +1,10 @@
 # Change Log
 
+## 1.2.0
+
+1. remove default configs
+2. add alias support
+
 ## 1.0.0
 
 1. get github info property from `_config.yml`
