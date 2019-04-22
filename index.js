@@ -58,7 +58,7 @@ if (typeof hexo !== 'undefined') {
 
     post.content = lines.join('\n')
     if (post.path !== false) {
-      fs.writeFile(post.path, post.content)
+      fs.writeFile(post.path, post.content, function() {})
     }
   })
 
